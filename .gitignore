@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+.cache/
+dist/
+build/
+*.egg-info/
+
+# Log files
+*.log
+
+# Virtual environment
+venv/
+.env
+
+# Database
+db.sqlite3
+
+# Static files
+staticfiles/
+
+# Media files
+media/
+
+# Environment variables
+.env
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Ignore the local settings file
+*/settings/local.py
+
+# Ignore any migrations files
+*/migrations/
