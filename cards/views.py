@@ -7,6 +7,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 
 class CardViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin, mixins.RetrieveModelMixin):
+    
     serializer_class = CardSerializer
     filter_backends = (DjangoFilterBackend, SearchFilter)
 
