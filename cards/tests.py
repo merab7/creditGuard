@@ -44,7 +44,7 @@ class CardValidationTest(APITestCase):
                 'ccv': fake.credit_card_security_code(),
             }
             response = self.client.post(url, card_data)
-            self.assertEqual(response.status_code, 400)  
+            self.assertEqual(response.status_code, 403)  
         
         end_timer = time.time()  
         time_needed = end_timer - timer

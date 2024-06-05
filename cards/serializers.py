@@ -15,6 +15,8 @@ class CardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Card
         fields = ( 'user', 'title',   'card_number', 'ccv', 'censored_number', 'is_valid', 'date_created')
+        read_only_fields = ['user'] 
+     
 
 
 
@@ -37,15 +39,15 @@ class CardSerializer(serializers.ModelSerializer):
     
 
 
-    #checking if the card in general is valid
+    #checking  if the card in general is valid
     def validate(self, data):
-        
+
         card_number = data.get('card_number')
         ccv = data.get('ccv')
         result_card_number = []
         couple = []
 
-        #getting form '1234567890'   this:   ['12', '34', '56', '78', '90']
+        #getting from '1234567890' to this:   ['12', '34', '56', '78', '90']
         n=2
         modified_list = [card_number[i:i+n] for i in range(0, len(card_number), n)]
        
