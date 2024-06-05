@@ -35,5 +35,6 @@ media/
 # Ignore the local settings file
 */settings/local.py
 
-# Ignore any migrations files
-*/migrations/
+# Ignore any migrations files except __init__.py
+**/migrations/*
+!**/migrations/__init__.py
